@@ -38,7 +38,7 @@ function Dashboard() {
       const userMessage = { sender: 'user', text: query };
       setConversation(prev => [...prev, userMessage]);
       
-      const res = await axios.post('https://supportdashagent-backend.onrender.com/api/agents/dashboard', { query });
+      const res = await axios.post('https://supportdashagentbackend.onrender.com/api/agents/dashboard', { query });
       
       const botMessage = { sender: 'bot', text: res.data.response };
       setConversation(prev => [...prev, botMessage]);
